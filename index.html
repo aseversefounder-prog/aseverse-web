@@ -3,224 +3,383 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="AseVerse is a creator-first storytelling platform where stories are read, heard, discussed, and built collaboratively by authors, readers, and voice actors."
-    >
-    <link rel="canonical" href="https://aseverse.com/">
-    <meta property="og:title" content="AseVerse | Ink the words. Amplify the voices.">
-    <meta property="og:description" content="A creator-first storytelling platform for readers, authors, and voice actors.">
-    <meta property="og:url" content="https://aseverse.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://aseverse.com/assets/aseverse-logo.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>AseVerse | Ink the words. Amplify the voices.</title>
-    <meta name="aseverse-demo-url" content="https://aseverse.com/demo">
+    <title>AseVerse MVP</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand-mark" href="#top" aria-label="AseVerse home">
-        <img src="assets/aseverse-logo.jpg" alt="AseVerse">
-      </a>
-      <nav aria-label="AseVerse website">
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#audiences">Who it's for</a>
-        <a href="#preview">Preview</a>
-      </nav>
-      <a class="outline-button" data-demo-link href="../index.html#home">View Demo</a>
-    </header>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="AseVerse home">
+          <img src="mockup-assets/image-001-1024x1024.jpg" alt="AseVerse">
+        </a>
+        <nav class="demo-nav" aria-label="Investor demo route">
+          <a href="#home">Browse</a>
+          <a href="#auth">Sign In</a>
+          <a href="#dual">Dual</a>
+          <a href="#community">Community</a>
+          <a href="#creator">Creator</a>
+          <a href="#profile">Profile</a>
+        </nav>
+        <button id="sessionButton" class="ghost-button" data-jump="auth">Sign In</button>
+      </header>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-content">
-          <p class="eyebrow">A creator-first storytelling platform</p>
-          <h1>AseVerse</h1>
-          <p class="tagline">Ink the words. Amplify the voices.</p>
-          <p class="hero-copy">
-            A premium space for stories that can be read, heard, discussed,
-            and monetized by the people who bring them to life.
-          </p>
-          <div class="hero-actions">
-            <a class="primary-button" href="#waitlist">Join the Waitlist</a>
-            <a class="outline-button" data-demo-link href="../index.html#dual">View Demo</a>
+      <main>
+        <section id="home" class="hero-section section-band dark-band">
+          <div class="hero-copy">
+            <p class="eyebrow">Investor demo flow</p>
+            <h1>Stories that are read, heard, discussed, and monetized.</h1>
+            <p class="lede">
+              AseVerse brings readers, authors, and narrators into one premium
+              storytelling experience built around Dual Experience audio.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-button" data-jump="story">Start Reader Flow</button>
+              <button class="secondary-button" data-jump="creator">Creator Flow</button>
+            </div>
+            <form id="waitlistForm" class="waitlist-form" aria-label="Join the AseVerse waitlist" novalidate>
+              <label>
+                Join the waitlist
+                <span>
+                  <input name="email" type="email" placeholder="you@example.com" required>
+                  <button class="primary-button" type="submit">Request Early Access</button>
+                </span>
+              </label>
+              <p id="waitlistStatus">Early readers, creators, and voice actors get first access.</p>
+            </form>
+            <div class="live-strip" aria-label="Live product signals">
+              <span>3.2k listening now</span>
+              <span>842 creator uploads this week</span>
+              <span>$18.4k paid to narrators</span>
+            </div>
           </div>
-          <div class="proof-strip" aria-label="AseVerse proof points">
-            <span>Readers</span>
-            <span>Authors</span>
-            <span>Voice actors</span>
-            <span>Book clubs</span>
+          <div class="phone-stage" aria-label="AseVerse mobile preview">
+            <div class="phone-frame">
+              <div class="phone-glow"></div>
+              <div class="phone-screen">
+                <div class="screen-logo">AseVerse</div>
+                <p class="screen-kicker">Featured Stories</p>
+                <div class="mini-covers">
+                  <img src="mockup-assets/image-003-1024x1536.jpg" alt="Featured stories mockup">
+                  <img src="mockup-assets/image-004-1024x1536.jpg" alt="Audio player mockup">
+                  <img src="mockup-assets/image-025-1024x1536.jpg" alt="StoryMix mockup">
+                </div>
+                <div class="now-playing-card">
+                  <span class="wave-icon" aria-hidden="true"></span>
+                  <div>
+                    <strong>Velvet Chains</strong>
+                    <span>Human voice narration active</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="hero-device" aria-label="AseVerse demo preview">
-          <img src="assets/demo-audio.jpg" alt="AseVerse immersive audio screen">
-        </div>
-      </section>
+        </section>
 
-      <section id="about" class="cream-section">
-        <div class="section-copy">
-          <p class="eyebrow">What is AseVerse?</p>
-          <h2>Stories should move between page, voice, and community without losing their soul.</h2>
-          <p>
-            AseVerse blends the discovery of a reading platform, the immersion
-            of an audiobook app, and the tools creators need to publish,
-            collaborate, and grow. It is built for novels, educational stories,
-            history, science, book clubs, and audio-first storytelling.
-          </p>
-        </div>
-      </section>
-
-      <section id="features" class="dark-section">
-        <div class="section-copy">
-          <p class="eyebrow">Core features</p>
-          <h2>One platform for the whole story lifecycle.</h2>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <h3>Read + Listen</h3>
-            <p>Switch between text, narration, or both with Dual Experience mode.</p>
-          </article>
-          <article>
-            <h3>Creator Tools</h3>
-            <p>Upload stories, manage chapters, track engagement, and prepare monetization.</p>
-          </article>
-          <article>
-            <h3>Voice Collaboration</h3>
-            <p>Connect authors with narrators through profiles, samples, invites, and credits.</p>
-          </article>
-          <article>
-            <h3>Book Clubs</h3>
-            <p>Turn highlights, comments, and chapter reactions into community conversation.</p>
-          </article>
-          <article>
-            <h3>Beyond Novels</h3>
-            <p>Support fiction, romance, history, science, classroom stories, and audio learning.</p>
-          </article>
-          <article>
-            <h3>Premium Discovery</h3>
-            <p>Give readers beautiful story cards, progress, recommendations, and saved libraries.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="audiences" class="audience-section">
-        <div class="section-copy">
-          <p class="eyebrow">Who it's for</p>
-          <h2>Built around the people who make stories matter.</h2>
-        </div>
-        <div class="audience-grid">
-          <article>
-            <span>01</span>
-            <h3>For Readers</h3>
-            <p>
-              Discover stories, save your TBR, read with custom themes, listen
-              while you move, and join chapter conversations without leaving the book.
-            </p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>For Creators</h3>
-            <p>
-              Publish text and audio stories, invite narrators, view performance,
-              unlock creator tiers, and build a direct relationship with your audience.
-            </p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>For Voice Actors</h3>
-            <p>
-              Showcase voice samples, collaborate with authors, get credited on
-              story pages, and turn narration into a visible creative role.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="preview" class="preview-section">
-        <div class="section-copy">
-          <p class="eyebrow">Demo preview</p>
-          <h2>A glimpse of the product experience.</h2>
-          <p>
-            The current mock MVP shows browsing, Dual Experience audio, creator
-            uploads, profile state, and waitlist capture using mock backend data.
-          </p>
-        </div>
-        <div class="screenshot-grid">
-          <img src="assets/demo-home.jpg" alt="AseVerse home screen">
-          <img src="assets/demo-audio.jpg" alt="AseVerse audio player">
-          <img src="assets/demo-upload.jpg" alt="AseVerse creator upload screen">
-          <img src="assets/demo-storymix.jpg" alt="AseVerse StoryMix preview">
-          <img src="assets/demo-badges.jpg" alt="AseVerse creator badges screen">
-        </div>
-        <a class="primary-button preview-button" data-demo-link href="../index.html#home">View Interactive Demo</a>
-      </section>
-
-      <section id="waitlist" class="waitlist-section">
-        <div class="waitlist-card">
-          <div>
-            <p class="eyebrow">Early access</p>
-            <h2>Join the AseVerse waitlist.</h2>
-            <p>
-              Readers, authors, narrators, and supporters can help shape the
-              beta before launch.
-            </p>
+        <section id="auth" class="section-band auth-band" aria-labelledby="auth-title">
+          <div class="auth-layout">
+            <div>
+              <p class="eyebrow">Mock authentication</p>
+              <h2 id="auth-title">Choose how you enter AseVerse.</h2>
+              <p>
+                This MVP uses local mock session data for now. The flow is ready
+                for real auth later without changing the product experience.
+              </p>
+            </div>
+            <form id="authForm" class="upload-panel">
+              <h3>Welcome back</h3>
+              <label>
+                Email
+                <input name="email" type="email" value="christina@aseverse.test" required>
+              </label>
+              <label>
+                Password
+                <input name="password" type="password" value="aseverse-demo" required>
+              </label>
+              <label>
+                Account type
+                <select name="role">
+                  <option>Reader</option>
+                  <option>Creator</option>
+                  <option>Voice Actor</option>
+                  <option>Creator + Reader</option>
+                </select>
+              </label>
+              <button class="primary-button full-width" type="submit">Continue</button>
+              <p id="sessionStatus" class="form-note">No live backend yet. Your session is stored only in this browser.</p>
+            </form>
           </div>
-          <form id="publicWaitlistForm" class="public-form">
+        </section>
+
+        <section class="section-band cream-band" aria-labelledby="discover-title">
+          <div class="section-heading">
+            <p class="eyebrow">Reader flow</p>
+            <h2 id="discover-title">Browse featured stories</h2>
+            <p>Three proof points: fantasy, romance, and educational storytelling all belong here.</p>
+          </div>
+          <div class="browse-tools" aria-label="Story browsing controls">
             <label>
-              Name
-              <input name="name" autocomplete="name" required>
+              Search
+              <input id="storySearch" type="search" placeholder="Search stories, authors, tags">
             </label>
             <label>
-              Email
-              <input name="email" type="email" autocomplete="email" required>
-            </label>
-            <label>
-              User type
-              <select name="userType" required>
-                <option>Reader</option>
-                <option>Author/Creator</option>
-                <option>Voice Actor</option>
-                <option>Investor/Supporter</option>
+              Genre
+              <select id="genreFilter">
+                <option value="all">All genres</option>
+                <option value="Science">Science / Education</option>
+                <option value="Romance">Romance</option>
+                <option value="Fantasy">Fantasy</option>
               </select>
             </label>
             <label>
-              Optional message
-              <textarea name="message" placeholder="Tell us what you want from AseVerse."></textarea>
+              Format
+              <select id="formatFilter">
+                <option value="all">All formats</option>
+                <option value="Dual">Dual Experience</option>
+                <option value="Human">Human Voice</option>
+                <option value="Educational">Educational</option>
+              </select>
             </label>
-            <button class="primary-button" type="submit">Request Early Access</button>
-            <p id="formStatus" class="form-status">
-              This form is ready for a Vercel API route or a form service connection.
+          </div>
+          <div id="storyGrid" class="story-grid"></div>
+        </section>
+
+        <section id="story" class="section-band story-detail-band" aria-labelledby="story-title">
+          <div class="story-detail">
+            <div class="story-cover-wrap">
+              <img id="detailCover" src="mockup-assets/image-005-1024x1536.jpg" alt="">
+            </div>
+            <div class="story-meta">
+              <p class="eyebrow">Selected story</p>
+              <h2 id="story-title">Solar Veil</h2>
+              <p id="storyDescription">
+                A luminous science-fantasy journey where a student astronomer discovers
+                a hidden history inside the sun's oldest flare.
+              </p>
+              <div id="storyTags" class="tag-row"></div>
+              <dl class="detail-stats">
+                <div>
+                  <dt>Narrator</dt>
+                  <dd id="storyNarrator">Elias Osei</dd>
+                </div>
+                <div>
+                  <dt>Audio</dt>
+                  <dd id="storyLength">9h 12m</dd>
+                </div>
+                <div>
+                  <dt>Progress</dt>
+                  <dd id="storyProgress">64%</dd>
+                </div>
+              </dl>
+              <div class="story-actions">
+                <button class="primary-button" data-jump="dual">Enter Dual Experience</button>
+                <button id="saveStoryButton" class="secondary-button" type="button">Save to TBR</button>
+                <button class="secondary-button" data-jump="community">See Reactions</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="dual" class="dual-section section-band dark-band" aria-labelledby="dual-title">
+          <div class="dual-layout">
+            <div class="dual-copy">
+              <p class="eyebrow">Wow feature</p>
+              <h2 id="dual-title">Dual Experience + Audio Immersion</h2>
+              <p>
+                Readers follow the text while narration, ambient sound, and community
+                context stay in sync. This is the moment AseVerse becomes more than a library.
+              </p>
+              <div class="narrator-tabs" role="tablist" aria-label="Narration mode">
+                <button class="active" data-narrator="AI Voice">AI Voice</button>
+                <button data-narrator="Human Voice">Human Voice</button>
+                <button data-narrator="Dual Narration">Dual Narration</button>
+              </div>
+              <div class="immersive-controls">
+                <label class="switch-row">
+                  <input id="ambientToggle" type="checkbox" checked>
+                  <span>Ambient score</span>
+                </label>
+                <label class="switch-row">
+                  <input id="bookmarkToggle" type="checkbox">
+                  <span>Bookmark this chapter</span>
+                </label>
+                <label>
+                  Ambient volume
+                  <input id="ambientVolume" type="range" min="0" max="100" value="62">
+                </label>
+                <label>
+                  Reading theme
+                  <select id="readingTheme">
+                    <option value="dark">Dark</option>
+                    <option value="warm">Warm</option>
+                    <option value="light">White</option>
+                  </select>
+                </label>
+                <label>
+                  Font size
+                  <input id="fontSize" type="range" min="16" max="28" value="22">
+                </label>
+              </div>
+            </div>
+            <div class="dual-device">
+              <div class="reader-panel">
+                <div class="reader-header">
+                  <div>
+                    <span id="dualStoryLabel">Solar Veil</span>
+                    <strong>Chapter 4: The Archive of Light</strong>
+                  </div>
+                  <span id="readerProgress">64%</span>
+                </div>
+                <div id="chapterText" class="chapter-text"></div>
+                <div class="glow-player">
+                  <div class="track-meta">
+                    <img id="playerCover" src="mockup-assets/image-005-1024x1536.jpg" alt="">
+                    <div>
+                      <strong id="playerTitle">Solar Veil</strong>
+                      <span id="playerNarrator">Dual Narration with Elias Osei</span>
+                    </div>
+                  </div>
+                  <div class="player-controls">
+                    <button id="backLine" aria-label="Back ten seconds">10</button>
+                    <button id="playToggle" class="play-button" aria-label="Play narration">Play</button>
+                    <button id="forwardLine" aria-label="Forward ten seconds">10</button>
+                  </div>
+                  <div class="progress-rail" aria-label="Narration progress">
+                    <span id="progressFill"></span>
+                  </div>
+                  <div class="player-footer">
+                    <span id="timeElapsed">3:22</span>
+                    <span id="modeLabel">Dual Narration</span>
+                    <span id="timeRemaining">-6:43</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="community" class="section-band cream-band" aria-labelledby="community-title">
+          <div class="section-heading">
+            <p class="eyebrow">Community reaction</p>
+            <h2 id="community-title">The story keeps moving after the chapter</h2>
+            <p>Book clubs, comments, and quote reactions make the reader loop feel inhabited.</p>
+          </div>
+          <div id="commentGrid" class="comment-grid"></div>
+        </section>
+
+        <section id="creator" class="section-band creator-band" aria-labelledby="creator-title">
+          <div class="creator-layout">
+            <div class="creator-dashboard">
+              <p class="eyebrow">Creator flow</p>
+              <h2 id="creator-title">Creator Dashboard</h2>
+              <p>Your words deserve a stage. Track reads, listens, earnings, and narration opportunities in one calm workspace.</p>
+              <div class="stats-grid">
+                <article class="stat-card">
+                  <span>Reads</span>
+                  <strong>48.2k</strong>
+                  <small>+18% this month</small>
+                </article>
+                <article class="stat-card">
+                  <span>Listens</span>
+                  <strong>21.7k</strong>
+                  <small>6.4k dual sessions</small>
+                </article>
+                <article class="stat-card">
+                  <span>Revenue</span>
+                  <strong>$3,840</strong>
+                  <small>Premium + coin unlocks</small>
+                </article>
+                <article class="stat-card">
+                  <span>Requests</span>
+                  <strong>12</strong>
+                  <small>Voice actor auditions</small>
+                </article>
+              </div>
+              <div class="creator-notice">
+                <strong>New narrator match</strong>
+                <span>Mara Voss sent a warm, cinematic audition for Chapter 1.</span>
+              </div>
+            </div>
+            <form id="uploadForm" class="upload-panel">
+              <p class="eyebrow">Upload story</p>
+              <h3>Tell us about your story.</h3>
+              <label>
+                Story title
+                <input name="title" value="The Lantern Cartographer" required>
+              </label>
+              <label>
+                Genre
+                <input name="genre" value="Historical Fantasy">
+              </label>
+              <label>
+                Narrator
+                <input name="narrator" value="Narration can be added later">
+              </label>
+              <label>
+                Summary
+                <textarea name="summary">A young mapmaker traces vanished Black towns through letters, songs, and the constellations her grandmother left behind.</textarea>
+              </label>
+              <div class="upload-options">
+                <button type="button">Upload Manuscript</button>
+                <button type="button">Upload Cover</button>
+                <button type="button">Add Audio Later</button>
+              </div>
+              <label>
+                Monetization
+                <select name="monetization">
+                  <option>First 5 chapters free, coin unlock after</option>
+                  <option>Free with ads</option>
+                  <option>Premium exclusive</option>
+                </select>
+              </label>
+              <button class="primary-button full-width" type="submit">Publish Preview</button>
+              <p class="form-note">Narration can always be added later. Your draft stays protected.</p>
+            </form>
+          </div>
+        </section>
+
+        <section id="published" class="section-band published-band" aria-live="polite">
+          <div class="published-card">
+            <p class="eyebrow">Publish confirmation</p>
+            <h2>Your story is safely submitted.</h2>
+            <p>
+              The Lantern Cartographer is queued for preview, monetization review,
+              and narrator matching. Estimated first-week reach: 8.6k readers.
             </p>
-          </form>
-        </div>
-      </section>
+            <button class="secondary-button" data-jump="creator">Back to Dashboard</button>
+          </div>
+        </section>
 
-      <section class="founder-note">
-        <div>
-          <p class="eyebrow">Founder note</p>
-          <h2>AseVerse is being built for the storytellers who deserve better tools.</h2>
-          <p>
-            The goal is simple: make stories feel alive, give creators more
-            ownership, and make voice actors part of the storytelling ecosystem
-            from the beginning.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <strong>AseVerse</strong>
-        <span>Ink the words. Amplify the voices.</span>
-      </div>
-      <nav aria-label="Footer">
-        <a href="#waitlist">Waitlist</a>
-        <a data-demo-link href="../index.html#home">Demo</a>
-        <a href="mailto:hello@aseverse.com">hello@aseverse.com</a>
-      </nav>
-    </footer>
-
-    <script src="site.js"></script>
+        <section id="profile" class="section-band profile-band" aria-labelledby="profile-title">
+          <div class="profile-layout">
+            <aside class="profile-card">
+              <span class="avatar large-avatar" aria-hidden="true"></span>
+              <p class="eyebrow">Profile system</p>
+              <h2 id="profile-title">Christina</h2>
+              <p id="profileRole">Premium Member · Reader</p>
+              <div class="profile-metrics">
+                <div><strong id="profileLibraryCount">32</strong><span>Library</span></div>
+                <div><strong id="profileTbrCount">0</strong><span>TBR</span></div>
+                <div><strong id="profilePoints">1,420</strong><span>Coins</span></div>
+              </div>
+            </aside>
+            <div class="profile-panels">
+              <article class="profile-panel">
+                <h3>Continue Reading</h3>
+                <div id="continueList" class="mini-list"></div>
+              </article>
+              <article class="profile-panel">
+                <h3>Saved to TBR</h3>
+                <div id="tbrList" class="mini-list"></div>
+              </article>
+              <article class="profile-panel">
+                <h3>Creator Activity</h3>
+                <div id="creatorActivity" class="mini-list"></div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>

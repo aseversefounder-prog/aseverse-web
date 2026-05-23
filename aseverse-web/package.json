@@ -1,0 +1,13 @@
+{
+  "name": "aseverse-public-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "node -e \"console.log('Static AseVerse landing page ready for Vercel')\"",
+    "start": "vercel dev"
+  },
+  "devDependencies": {
+    "vercel": "^37.0.0"
+  }
+}
